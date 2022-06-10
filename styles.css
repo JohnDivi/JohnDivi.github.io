@@ -35,8 +35,9 @@ hr.solid {
 }
 
 body {
-    background-color: rgb(200, 255, 200);
+    background-color: rgb(230, 230, 255);
     font-family: Arial, Helvetica, sans-serif;
+    color: black;
     padding-left: 16px;
     padding-right: 16px;
 }
