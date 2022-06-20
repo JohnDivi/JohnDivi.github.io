@@ -11,19 +11,25 @@ body {
 
 main {
     height: 100vh;
-    border-top: 100px solid black;
-    border-bottom: 100px solid black;
 }
 
 #welcome {
+    position: fixed;
     display: grid;
+
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(5, 1fr);
+
+    background-color: white;
+
+    border-top: 75px solid black;
+    border-bottom: 75px solid black;
 
     height: 100%;
     padding: 2.5%;
 
     overflow: hidden;
+    z-index: 1;
 }
 
 #welcome-header {
@@ -71,4 +77,23 @@ main {
     color: white;
 
     cursor: pointer;
+}
+
+/* Animation classes */
+.remove-welcome {
+    animation: removeWelcome 500ms linear;
+    opacity: 0;
+}
+
+@keyframes removeWelcome {
+    from {
+        border-top: 75px solid black;
+        border-bottom: 75px solid black;
+        opacity: 1;
+    }
+
+    to {
+        border: 0px solid black;
+        opacity: 0;
+    }
 }
