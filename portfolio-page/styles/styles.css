@@ -18,7 +18,7 @@ main {
 #welcome {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 
     height: 100%;
     padding: 2.5%;
@@ -34,6 +34,7 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 6em;
+
 }
 
 #welcome-author {
@@ -48,19 +49,19 @@ main {
 
 #welcome-continue {
     display: flex;
-    grid-row: 5 / span 1;
-    grid-column: 7 / span 1;
+    grid-row: 4 / span 1;
+    grid-column: 7 / span 2;
 
     justify-content: center;
     align-items: center;
     font-size: 1.75em;
     font-weight: bold;
-
+    
     border: 4px solid black;
 
-    transition: transform 250ms linear,
-                background-color 250ms linear,
-                color 250ms linear;
+    transition: transform 150ms linear,
+                background-color 150ms linear,
+                color 150ms linear;
 }
 
 #welcome-continue:hover {
