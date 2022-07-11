@@ -1,5 +1,7 @@
 
 erase = false;
+mouseIsHeld = false;
+mouseOver = false;
 
 function makeGrid(size) {
     let gridContainer = document.querySelector("#grid-draw-container");
@@ -14,14 +16,14 @@ function makeGrid(size) {
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
             let box = document.createElement("div");
+            box.draggable = "false";
             box.className = "undrawn-box";
-            box.addEventListener('mouseover', () => {
-                if (erase) {
+            box.addEventListener('mousemove', () => {
+                if (mouseIsHeld && erase) {
                     box.className = "undrawn-box";
-                } else {
+                } else if (mouseIsHeld) {
                     box.className = "drawn-box";
                 }
-                
             });
             gridContainer.appendChild(box);
         }
@@ -45,6 +47,29 @@ function modifyGridSize(incOrDec) {
 
     makeGrid(size);
 }
+
+// Set up mouse hold on draw area
+document.querySelector("#grid-draw-container").addEventListener("mousedown", () => {
+    if (mouseOver) {
+        mouseIsHeld = true;
+        console.log("DRAW");
+    }
+});
+
+document.querySelector("#grid-draw-container").addEventListener("mouseover", () => {
+    mouseOver = true;
+});
+
+document.querySelector("#grid-draw-container").addEventListener("mouseup", () => {
+    if (mouseIsHeld) {
+        mouseIsHeld = false;
+    }
+});
+
+document.querySelector("#grid-draw-container").addEventListener("mouseleave", () => {
+    mouseOver = false;
+});
+
 
 // Set up increase/decrease sizes
 document.querySelector("#decrease-size").addEventListener("click", () => {
