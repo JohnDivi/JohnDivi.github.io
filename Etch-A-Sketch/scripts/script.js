@@ -16,7 +16,7 @@ function makeGrid(size) {
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
             let box = document.createElement("div");
-            box.draggable = "false";
+            box.draggable = false;
             box.className = "undrawn-box";
             box.addEventListener('mousemove', () => {
                 if (mouseIsHeld && erase) {
