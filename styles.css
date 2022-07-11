@@ -39,6 +39,11 @@ hr.solid {
     font-weight: bold;
 }
 
+#etch-a-sketch {
+    text-align: center;
+    font-weight: bold;
+}
+
 body {
     background-color: rgb(230, 230, 255);
     font-family: Arial, Helvetica, sans-serif;
