@@ -27,7 +27,7 @@ function makeGrid(size) {
                     box.className = "undrawn-box";
                 } 
                 
-                if (mouseIsHeld) {
+                else if (mouseIsHeld) {
                     box.className = "drawn-box";
                 }
             });
