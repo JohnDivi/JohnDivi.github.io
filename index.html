@@ -1,63 +1,144 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="JohnDivi's projects">
-    <meta name="author" content="John Divinagracia">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JohnDivi - Main</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>John's Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/script.js"></script>
 </head>
 <body>
-    <h1 class="page-title">JohnDivi's Main Page</h1>
-    
-    <p id="intro">These are all of the projects that I have created.
-        Feel free to take a look!</p>
-    <p id="intro-note">Note: Clicking on the project name hyperlinks will take you to the
-        repository page of the project on a new window.</p>
-    <p id="intro-page-repo"><a href="portfolio-page/portfolio.html"
-        target="_blank">Go to WIP portfolio</a></p>
-    <p id="intro-page-repo"><a href="https://github.com/JohnDivi/JohnDivi.github.io"
-        target="_blank">Page Repository</a></p>
-    <p id="rock-paper-scissors"><a href="Rock Paper Scissors/index.html"
-        target="_blank">New! Rock Paper Scissors</a></p>
-    <p id="etch-a-sketch"><a href="Etch-A-Sketch/index.html"
-        target="_blank">New! Etch-A-Sketch</a></p>
+    <header>
+        <nav>
+            <button id="projects-button" class="nav-button nav-selected">
+                Projects
+            </button>
+            <button id="mini-projects-button" class="nav-button nav-deselected">
+                Mini Projects
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div id="projects-container">
+            <div class="project">
+                <div class="project-name">
+                    Simple Notes
+                </div>
+                <div class="project-description">
+                    Notes creation web app. You can create, edit, and check the
+                    time the note was created.
+                </div>
+                <div class="project-tools">
+                    Tools used:
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    
+                    <a href="projects/simple-notes/index.html" target="_blank">
+                        > Go to interactive project</a>
+                    <a href="https://github.com/JohnDivi/Notes" target="_blank">
+                        > Go to GitHub repository</a>
+                </div>
+            </div>
 
-    <hr class="solid">
-    <h2 class="subsection-title">Projects</h2>
-    <hr class="solid">
-    
-    <h3 class="projects"><a href="https://github.com/JohnDivi/GameSFML" target="_blank">
-        Project 1 - GameSFML</a></h3>
-    <p>A game made with C++ and SFML. This project was made quite a while ago. On this project,
-        I learned the importance of clean code. The best way to see what this project looks
-        like is by clicking the link below that will lead to a demo video (running the game
-        doesn't properly load the textures and fonts).
-    </p>
-    <ul class="zip-download">
-        <li><a href="https://www.youtube.com/watch?v=uwNPpsw8rg8" target="_blank">
-            Project demo video</a></li>
-        <li><a href="https://github.com/JohnDivi/GameSFML/archive/refs/heads/main.zip">
-            Download .zip</a></li>
-    </ul>
-    <hr class="solid">
+            <div class="project">
+                <div class="project-name">
+                    C++ Game using SFML
+                </div>
+                <div class="project-description">
+                    Created a simple C++ game using SFML. Controlling a box,
+                    survive as long as possible while dodging enemy box bullets.
+                </div>
+                <div class="project-tools">
+                    Tools used:
+                    <ul>
+                        <li>C++</li>
+                        <li>SFML library</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="https://www.youtube.com/watch?v=uwNPpsw8rg8" target="_blank">
+                        > Go to demo video</a>
+                    <a href="https://github.com/JohnDivi/GameSFML" target="_blank">
+                        > Go to GitHub repository</a>
+                </div>
+            </div>
 
-    <h3 class="projects"><a href="https://github.com/JohnDivi/RegisterAndLogin" target="_blank">
-        Project 2 - RegisterAndLogin (WIP)</a></h3>
-    <p>A project on user login and registration. Currently, the project will be on
-        the CLI. However, in the future my plan is to implement a fully functional GUI.</p>
-    <ul class="zip-download">
-        <li><a href="https://github.com/JohnDivi/RegisterAndLogin/archive/refs/heads/main.zip">
-            Download .zip</a></li>
-    </ul>
-    <hr class="solid">
-    
-    <h3 class="projects"><a href="https://github.com/JohnDivi" target="_blank">
-        Project 3 - OpenGL Game (Not Started Yet)</a></h3>
-    <p>My next project will be creating an OpenGL game after completing the first project.
-        I am thinking on creating a simple 2D top-down shooter.</p>
-    <hr class="solid">
+            <div class="project">
+                <div class="project-name">
+                    CLI Register and Login
+                </div>
+                <div class="project-description">
+                    Created a CLI application in which the user is able to
+                    register and login using a local database. Upon login,
+                    the user may add, edit, and delete entries.
+                </div>
+                <div class="project-tools">
+                    Tools used:
+                    <ul>
+                        <li>C++</li>
+                        <li>OpenSSL library</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/JohnDivi/RegisterAndLogin" target="_blank">
+                        > Go to GitHub repository</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mini-projects-container" hidden>
+            <div class="project">
+                <div class="project-name">
+                    Etch-A-Sketch
+                </div>
+                <div class="project-description">
+                    Small mini project where you can draw on a low-res canvas.
+                </div>
+                <div class="project-tools">
+                    Tools used:
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="mini-projects/etch-a-sketch/index.html" target="_blank">
+                        > Go to interactive project</a>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="project-name">
+                    Rock Paper Scissors
+                </div>
+                <div class="project-description">
+                    Small mini project where you play rock paper scissors.
+                </div>
+                <div class="project-tools">
+                    Tools used:
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="mini-projects/rock-paper-scissors/index.html" target="_blank">
+                        > Go to interactive project</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
 
 </body>
 </html>

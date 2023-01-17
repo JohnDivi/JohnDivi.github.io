@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Etch-A-Sketch</h1>
+    </header>
+    
+    <main>
+        <section id="play-area">
+            <div class="container" id="grid-size-options-container">
+
+                <!-- Left arrow: decrease grid size -->
+                <button class="grid-option" id="decrease-size">←</button>
+                
+                <!-- Grid info -->
+                <div class="grid-option" id="grid-size-info">
+                    <p>Grid Size</p>
+                    <p id="grid-size">8x8</p>
+                </div>
+                
+                <!-- Right arrow: increase grid size -->
+                <button class="grid-option" id="increase-size">→</button>
+
+            </div>
+
+            <div class="container" id="grid-draw-container">
+                <!-- Grid w/shadow -->
+            </div>
+
+            <div class="container" id="options-container">
+
+                <!-- Eraser -->
+                <button class="option" id="erase">Eraser</button>
+
+                <!-- Clear -->
+                <button class="option" id="clear">Clear</button>
+
+            </div>
+        </section>
+        <script src="scripts/script.js"></script>
+    </main>
+</body>
+</html>
